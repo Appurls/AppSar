@@ -240,8 +240,8 @@ GameObject:
   - component: {fileID: 776060208}
   - component: {fileID: 776060212}
   m_Layer: 0
-  m_Name: Box
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: main_character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -360,7 +360,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.2735849, g: 0.18421729, b: 0.029681386, a: 1}
+  m_Color: {r: 0.93207544, g: 0.9243396, b: 0.12486295, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 1538679863}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
