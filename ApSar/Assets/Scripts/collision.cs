@@ -21,12 +21,12 @@ public class collision : MonoBehaviour
    private void OnTriggerEnter2D(Collider2D other)
    
     {
-        Debug.Log("collison detected");
+       //Debug.Log("collison detected");
         // Check if the collided object has the "Player" tag
         if (other.CompareTag("main_character"))
         {
             // Perform actions specific to the player (optional)
-            Debug.Log("Fruit touched the player!");
+           // Debug.Log("Fruit touched the player!");
 
             // Destroy the fruit GameObject when it collides with the player
             Destroy(gameObject);
