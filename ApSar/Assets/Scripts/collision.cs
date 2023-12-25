@@ -35,5 +35,10 @@ public class collision : MonoBehaviour
              Destroy(gameObject);
 
         }
+
+        if (other.CompareTag("walls")){
+             Destroy(gameObject);
+
+        }
     }
 }
