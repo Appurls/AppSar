@@ -10,6 +10,7 @@ public class Moving : MonoBehaviour
      public SpriteRenderer sr;
 
      private Rigidbody2D rb;
+     public BoxCollider2D cl;
 
      public float attackDuration = 0.01f;
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Moving : MonoBehaviour
 
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
         
     }
 
@@ -28,6 +30,10 @@ public class Moving : MonoBehaviour
             // Left mouse button is clicked
             animator.SetBool("Attack" , true);
             Debug.Log("mouse pressesd");
+            cl.size = new Vector2(2,1);
+        
+            
+
 
             Invoke("ResetAttackAnimation", attackDuration);
    
@@ -70,6 +76,7 @@ public class Moving : MonoBehaviour
     {
         // Reset the "Attack" parameter after the attack duration
         animator.SetBool("Attack", false);
+        cl.size = new Vector2(1,1);
     }
     
 }
