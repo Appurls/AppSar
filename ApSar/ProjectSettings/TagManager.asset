@@ -7,7 +7,6 @@ TagManager:
   - main_character
   - fruits
   - floor
-  - walls
   layers:
   - Default
   - TransparentFX
