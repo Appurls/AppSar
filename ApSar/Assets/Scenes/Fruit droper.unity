@@ -615,6 +615,7 @@ MonoBehaviour:
   moveSpeed: 15
   animator: {fileID: 776060213}
   sr: {fileID: 776060210}
+  cl: {fileID: 776060209}
   attackDuration: 0.32
 --- !u!95 &776060213
 Animator:
