@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,16 @@ public class Moving : MonoBehaviour
 
      private Rigidbody2D rb;
      public BoxCollider2D cl;
+     public GameObject AttackPlayer;
+      public GameObject RunPlayer;
+
+     public AudioClip Run;
+     public AudioClip Attack;
+     private Boolean isplaying;
+ 
+     
+     
+
 
      public float attackDuration = 0.01f;
     // Start is called before the first frame update
@@ -28,9 +39,15 @@ public class Moving : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Left mouse button is clicked
+            AudioSource AS = AttackPlayer.GetComponent<AudioSource>();
+
+           AS.clip = Attack;
+           AS.Play();
+
             animator.SetBool("Attack" , true);
             Debug.Log("mouse pressesd");
             cl.size = new Vector2(2,1);
+           
         
             
 
@@ -44,6 +61,22 @@ public class Moving : MonoBehaviour
      
          // Get input from arrow keys
         float horizontalInput = Input.GetAxis("Horizontal");
+
+        if(horizontalInput != 0){
+            if(!isplaying){
+             AudioSource AS = RunPlayer.GetComponent<AudioSource>();
+            AS.clip = Run;
+            AS.Play();
+            isplaying = true;
+            }
+        }
+        else{
+            AudioSource AS = RunPlayer.GetComponent<AudioSource>();
+            AS.clip = Run;
+            AS.Stop();
+            isplaying = false;
+
+        }
         if(horizontalInput > 0){
             sr.flipX = true;
         }
