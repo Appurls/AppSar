@@ -5,11 +5,7 @@ using UnityEngine;
 public class updown : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+   
     public float amplitude = 1.0f;   // Adjust this value to change the movement range
     public float speed = 2.0f;   
      public float forwardSpeed = 2.0f;
