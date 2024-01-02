@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Lives : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Lives : MonoBehaviour
     public BoxCollider2D collider1;
     private int no_of_lives = 3;
     public AudioSource sfx;
+    
 
     void Start()
     {
@@ -29,7 +31,7 @@ public class Lives : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
     }
 
     void OnTriggerEnter2D(Collider2D other){
@@ -59,6 +61,10 @@ public class Lives : MonoBehaviour
 
             GameOver.SetActive(true);
             Debug.Log("Game Over");
+           
+
         }
     }
+
+    
 }

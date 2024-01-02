@@ -3,7 +3,16 @@ guid: d7c7a62ce2c830a468ab4cfed125b3d0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - GameOver: {instanceID: 0}
+  - cieling: {instanceID: 0}
+  - Blur: {instanceID: 0}
+  - player: {instanceID: 0}
+  - animat: {instanceID: 0}
+  - collider1: {instanceID: 0}
+  - sfx: {instanceID: 0}
+  - RestartButton: {fileID: 4465750178785269646, guid: 5f3e432a1ec7b426aa0c0f892c895ac3, type: 3}
+  - MainMenuButton: {fileID: 8753974795531189655, guid: 78e549101ee704a77ad59476b31102c6, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
