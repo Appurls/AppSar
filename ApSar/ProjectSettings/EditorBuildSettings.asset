@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fruit droper.unity
     guid: 7957bbfd5fd499242bcf74ed2da07018
+  - enabled: 1
+    path: Assets/Scenes/level_2.unity
+    guid: f8f8371ac59fb6440a25e857dd52e4eb
   m_configObjects: {}

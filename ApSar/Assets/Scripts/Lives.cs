@@ -21,6 +21,8 @@ public class Lives : MonoBehaviour
     public BoxCollider2D collider1;
     private int no_of_lives = 3;
     public AudioSource sfx;
+
+    public float hurtduration = 0.32f;
     
 
     void Start()
@@ -37,6 +39,8 @@ public class Lives : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(no_of_lives != 0){
             if(other.CompareTag("fruits")){
+                animat.SetBool("hurt", true);
+                Invoke("resethurt", hurtduration);
                 Debug.Log("fruit touched floor");
                 Debug.Log("no of lives left : " + no_of_lives);
 
@@ -64,6 +68,10 @@ public class Lives : MonoBehaviour
            
 
         }
+    }
+
+    public void resethurt(){
+        animat.SetBool("hurt", false);
     }
 
     

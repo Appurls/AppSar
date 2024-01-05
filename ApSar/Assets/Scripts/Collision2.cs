@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collision2 : MonoBehaviour
 {   
@@ -21,7 +22,17 @@ public class Collision2 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+
     {
+        if (score > 20){
+            Scene currentScene = SceneManager.GetActiveScene();
+
+            if(currentScene.name.Equals("level_1")){
+                SceneManager.LoadScene("level_2");
+            }
+
+        }
+           
         
     }
 
@@ -30,7 +41,7 @@ public class Collision2 : MonoBehaviour
         if(other.CompareTag("fruits")){
 
             Debug.Log("Touched a fruit");
-            score+= 1;
+            score+= 2;
             text.text = "" + score;
             Debug.Log("Score is : " + score);
 

@@ -391,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &60911519
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7681,6 +7681,7 @@ MonoBehaviour:
   animat: {fileID: 776060213}
   collider1: {fileID: 776060209}
   sfx: {fileID: 1538679867}
+  hurtduration: 0.15
 --- !u!82 &1538679867
 AudioSource:
   m_ObjectHideFlags: 0

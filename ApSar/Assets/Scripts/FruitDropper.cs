@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FruitDropper : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class FruitDropper : MonoBehaviour
 
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+            if(currentScene.name.Equals("level_2")){
+                spawnRate = 0.5f;
+            }
         InvokeRepeating("SpawnFruit", 0f, spawnRate);
     }
 
